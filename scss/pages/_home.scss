@@ -1,0 +1,330 @@
+.hero {
+   padding-top: 100px;
+   padding-bottom: 71px;
+
+   @include responsive(m-phone) {
+      padding-top: 20px;
+   }
+
+   .container {
+      display: flex;
+      gap: 100px;
+
+      @include responsive(tablet) {
+         flex-direction: column-reverse;
+         justify-content: center;
+         align-items: center;
+         gap: 40px;
+      }
+
+      .hero-image {
+         position: relative;
+         z-index: 10;
+
+         img {
+            position: relative;
+            z-index: 100;
+            object-fit: cover;
+
+            @include responsive(m-phone) {
+               width: 220px;
+               height: 220px;
+            }
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            width: 243px;
+            height: 243px;
+            border-radius: 50%;
+            background: #EDF7FA;
+            top: 12px;
+            left: -3px;
+            z-index: 1;
+
+            @include responsive(m-phone) {
+               width: 220px;
+               height: 220px;
+            }
+         }
+      }
+
+      .hero-info {
+         // width: 500px;
+
+         .hero-title {
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 1.3;
+            color: $color-dark;
+            margin-bottom: 40px;
+
+            @include responsive(tablet) {
+               font-size: 32px;
+               text-align: center;
+            }
+         }
+
+         .hero-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 38px;
+
+            @include responsive(tablet) {
+               text-align: center;
+            }
+         }
+      }
+
+   }
+}
+
+.title {
+   font-family: 'Heebo';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 22px;
+   line-height: 60px;
+   color: $color-dark;
+}
+
+.posts {
+   background-color: #EDF7FA;
+   padding-top: 10px;
+   padding-bottom: 30px;
+
+   .container {
+      .top {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         @include responsive(m-phone) {
+            justify-content: center;
+         }
+
+         .all {
+            font-family: 'Heebo';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #00A8CC;
+
+            @include responsive(m-phone) {
+               display: none;
+            }
+         }
+      }
+
+      .card {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+
+         @include responsive(tablet) {
+            flex-direction: column;
+         }
+
+         .card-item {
+            width: 418px;
+            height: 295px;
+            padding: 26px 27px 7px 23px;
+            background-color: #fff;
+
+            @include responsive(m-phone) {
+               width: 100%;
+               padding: 18px;
+            }
+
+            .card-title {
+               font-family: 'Heebo';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 26px;
+               line-height: 38px;
+               color: $color-dark;
+               margin-bottom: 17px;
+
+               @include responsive(m-phone) {
+                  margin-bottom: 12px;
+                  font-size: 22px;
+               }
+            }
+
+            .card-time {
+               font-family: 'Heebo';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 18px;
+               line-height: 26px;
+               color: $color-dark;
+               margin-bottom: 11px;
+
+               span:first-child {
+                  margin-right: 20px;
+               }
+
+               span:nth-child(2) {
+                  margin-left: 20px;
+               }
+            }
+
+            .card-text {
+               font-family: 'Heebo';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 16px;
+               line-height: 24px;
+               color: $color-dark;
+            }
+         }
+      }
+   }
+}
+
+.years {
+   font-family: 'Heebo';
+   font-style: normal;
+   font-weight: 900;
+   font-size: 18px;
+   color: #FFFFFF;
+   text-align: center;
+   width: 62px;
+   height: 25px;
+   border-radius: 16px;
+   display: inline-block;
+}
+
+.works {
+   padding-top: 10px;
+   padding-bottom: 83px;
+
+   .container {
+
+      hr:nth-child(2),
+      hr:nth-child(3),
+      hr:nth-child(4) {
+         display: none;
+      }
+
+      .title {
+         @include responsive(tablet) {
+            text-align: center;
+         }
+      }
+
+      .works-list {
+         .works-item:first-child {
+            margin-top: 22px;
+
+            @include responsive(m-phone) {
+               display: flex;
+            }
+         }
+
+         .works-item {
+            @include responsive(m-phone) {
+               display: none;
+            }
+
+            display: flex;
+
+            @include responsive(tablet) {
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+            }
+
+            gap: 18px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+
+            .item-img img {
+               @include responsive(m-phone) {
+                  width: 330px;
+               }
+
+               @include responsive(phone) {
+                  width: 300px;
+               }
+            }
+
+            .item-info {
+               display: flex;
+               flex-direction: column;
+               gap: 15px;
+
+               .item-title {
+                  font-family: 'Heebo';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 30px;
+                  line-height: 44px;
+                  color: $color-dark;
+                  @include responsive(m-phone) {
+                     font-size: 24px;
+                  }
+               }
+
+               div {
+                  @include responsive(tablet) {
+                     text-align: center;
+                  }
+
+                  @include responsive(m-phone) {
+                     text-align: start;
+                  }
+               }
+
+               .years {
+                  background: #142850;
+               }
+
+               .name {
+                  font-family: 'Heebo';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 29px;
+                  margin-left: 26px;
+                  color: #8695A4;
+               }
+
+               .item-text {
+                  font-family: 'Heebo';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: $color-dark;
+               }
+            }
+         }
+      }
+   }
+}
+
+.footer {
+   padding: 50px 0;
+   .networks {
+      text-align: center;
+      margin-bottom: 25px;
+      a:not(:last-child) {
+         margin-right: 35px;
+      }
+   }
+
+   .web-text {
+      font-family: 'Heebo';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: $color-dark;
+   }
+}

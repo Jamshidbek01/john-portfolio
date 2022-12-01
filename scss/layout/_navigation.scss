@@ -1,0 +1,56 @@
+.site-nav {
+    @include responsive(phone) {
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .site-nav-list {
+        display: flex;
+        gap: 33px;
+
+        .nav-link {
+            font-family: 'Heebo';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            color: $color-dark;
+            transition: .3s ease-in-out;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.site-nav.active {
+    @include responsive(phone) {
+        z-index: 99999;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        opacity: 1;
+        top: 0; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .site-nav-list {
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        .nav-link {
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+    }
+}
