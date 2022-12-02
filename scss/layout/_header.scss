@@ -20,7 +20,7 @@
         top: 20px;
         right: 20px;
 
-        @include responsive(phone) {
+        @include responsive(m-phone) {
             display: block;
         }
 

@@ -155,24 +155,6 @@
                }
             }
 
-            .card-time {
-               font-family: 'Heebo';
-               font-style: normal;
-               font-weight: 400;
-               font-size: 18px;
-               line-height: 26px;
-               color: $color-dark;
-               margin-bottom: 11px;
-
-               span:first-child {
-                  margin-right: 20px;
-               }
-
-               span:nth-child(2) {
-                  margin-left: 20px;
-               }
-            }
-
             .card-text {
                font-family: 'Heebo';
                font-style: normal;
@@ -204,13 +186,13 @@
    padding-bottom: 83px;
 
    .container {
-
+      @include responsive(m-phone) {
       hr:nth-child(2),
       hr:nth-child(3),
       hr:nth-child(4) {
          display: none;
       }
-
+      }
       .title {
          @include responsive(tablet) {
             text-align: center;

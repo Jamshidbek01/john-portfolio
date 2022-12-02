@@ -1,0 +1,129 @@
+.work {
+    .container {
+        @include responsive(m-phone) {
+
+            hr:nth-child(2),
+            hr:nth-child(3),
+            hr:nth-child(4),
+            hr:nth-child(6) {
+                display: none;
+            }
+        }
+
+
+        .works-list {
+            .works-item:first-child {
+                margin-top: 22px;
+
+                @include responsive(m-phone) {
+                    display: flex;
+                }
+            }
+
+
+            .works-item {
+                @include responsive(m-phone) {
+                    display: none;
+                }
+
+                display: flex;
+
+                @include responsive(tablet) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                gap: 18px;
+                margin-bottom: 30px;
+                margin-top: 30px;
+
+                .item-img {
+                    @include responsive(m-phone) {
+                        text-align: center;
+                    }
+
+                    img {
+                        @include responsive(m-phone) {
+                            text-align: center;
+                            width: 330px;
+                        }
+
+                        @include responsive(phone) {
+                            width: 300px;
+                        }
+                    }
+                }
+
+
+                .item-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .item-title {
+                        font-family: 'Heebo';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 30px;
+                        line-height: 44px;
+                        color: $color-dark;
+
+                        @include responsive(m-phone) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    div {
+                        @include responsive(tablet) {
+                            text-align: center;
+                        }
+
+                        @include responsive(m-phone) {
+                            text-align: start;
+                        }
+                    }
+
+                    .years {
+                        background: #142850;
+                    }
+
+                    .name {
+                        font-family: 'Heebo';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 29px;
+                        margin-left: 26px;
+                        color: #8695A4;
+                    }
+
+                    .item-text {
+                        font-family: 'Heebo';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: $color-dark;
+                    }
+                }
+            }
+
+            .item-5 {
+                display: none;
+
+                @include responsive(m-phone) {
+                    display: block;
+                }
+            }
+
+            .item-5-line {
+                display: none;
+
+                @include responsive(m-phone) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

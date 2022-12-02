@@ -394,15 +394,16 @@ h1 {
   line-height: 1.36;
   font-weight: 700;
   color: #21243D;
+  margin-bottom: 7px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   h1 {
     font-size: 3.2rem;
   }
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   line-height: 1.5;
   font-weight: 700;
 }
@@ -410,6 +411,22 @@ h2 {
   h2 {
     font-size: 2.2rem;
   }
+}
+
+.card-time {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #21243D;
+  margin-bottom: 11px;
+}
+.card-time span:first-child {
+  margin-right: 20px;
+}
+.card-time span:nth-child(2) {
+  margin-left: 20px;
 }
 
 .header {
@@ -446,7 +463,7 @@ h2 {
   top: 20px;
   right: 20px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .header .toggle-btn {
     display: block;
   }
@@ -483,7 +500,7 @@ h2 {
   background-color: white;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .site-nav {
     display: none;
     opacity: 0;
@@ -513,7 +530,7 @@ h2 {
   color: #FF6464;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .site-nav.active {
     z-index: 99999;
     position: fixed;
@@ -769,21 +786,6 @@ button {
     font-size: 22px;
   }
 }
-.posts .container .card .card-item .card-time {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-  color: #21243D;
-  margin-bottom: 11px;
-}
-.posts .container .card .card-item .card-time span:first-child {
-  margin-right: 20px;
-}
-.posts .container .card .card-item .card-time span:nth-child(2) {
-  margin-left: 20px;
-}
 .posts .container .card .card-item .card-text {
   font-family: "Heebo";
   font-style: normal;
@@ -810,10 +812,12 @@ button {
   padding-top: 10px;
   padding-bottom: 83px;
 }
-.works .container hr:nth-child(2),
+@media screen and (max-width: 425px) {
+  .works .container hr:nth-child(2),
 .works .container hr:nth-child(3),
 .works .container hr:nth-child(4) {
-  display: none;
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .works .container .title {
@@ -939,4 +943,238 @@ button {
   line-height: 21px;
   text-align: center;
   color: #21243D;
+}
+
+.blog {
+  padding-top: 70px;
+}
+.blog .container .blog-list .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.blog .container .blog-list .list-item .list-title {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  color: #21243D;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 425px) {
+  .blog .container .blog-list .list-item .list-title {
+    font-size: 26px;
+  }
+}
+
+.works-detail {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.works-detail .container .title {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 50px;
+  color: #21243D;
+  width: 506px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .works-detail .container .title {
+    width: 339px;
+    font-size: 30px;
+  }
+}
+.works-detail .container .about {
+  margin-bottom: 23px;
+}
+.works-detail .container .about .years {
+  background-color: #FF6464;
+  margin-right: 25px;
+}
+.works-detail .container .about span:last-child {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #21243D;
+}
+.works-detail .container .text {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+.works-detail .container h3 {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 60px;
+  color: #21243D;
+}
+@media screen and (max-width: 425px) {
+  .works-detail .container h3 {
+    font-size: 20px;
+  }
+}
+.works-detail .container h2 {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 60px;
+  color: #21243D;
+}
+@media screen and (max-width: 425px) {
+  .works-detail .container h2 {
+    font-size: 26px;
+  }
+}
+.works-detail .container img {
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .work .container hr:nth-child(2),
+.work .container hr:nth-child(3),
+.work .container hr:nth-child(4),
+.work .container hr:nth-child(6) {
+    display: none;
+  }
+}
+.work .container .works-list .works-item:first-child {
+  margin-top: 22px;
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.work .container .works-list .works-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work .container .works-list .works-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item .item-img {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item .item-img img {
+    text-align: center;
+    width: 330px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .work .container .works-list .works-item .item-img img {
+    width: 300px;
+  }
+}
+.work .container .works-list .works-item .item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.work .container .works-list .works-item .item-info .item-title {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: #21243D;
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item .item-info .item-title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work .container .works-list .works-item .item-info div {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .works-item .item-info div {
+    text-align: start;
+  }
+}
+.work .container .works-list .works-item .item-info .years {
+  background: #142850;
+}
+.work .container .works-list .works-item .item-info .name {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  margin-left: 26px;
+  color: #8695A4;
+}
+.work .container .works-list .works-item .item-info .item-text {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243D;
+}
+.work .container .works-list .item-5 {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .item-5 {
+    display: block;
+  }
+}
+.work .container .works-list .item-5-line {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .work .container .works-list .item-5-line {
+    display: block;
+  }
 }

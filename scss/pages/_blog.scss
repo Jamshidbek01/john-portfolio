@@ -1,0 +1,26 @@
+.blog {
+    padding-top: 70px;
+    .container {
+        .blog-list {
+            .list-item {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                .list-title {
+                    font-family: 'Heebo';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 44px;
+                    color: #21243D;
+                    margin-bottom: 15px; 
+                    @include responsive(m-phone) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
